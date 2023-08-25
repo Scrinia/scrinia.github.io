@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vertical Scrolling Timeline</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="timeline" id="timeline-container">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
