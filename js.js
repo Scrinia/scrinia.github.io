@@ -1,46 +1,46 @@
-const timelineData = [
-  { id: 1, content: 'Event 1', date: '2023-07-25' },
-  { id: 2, content: 'Event 2', date: '2023-07-26' },
-  // Add more timeline data as needed
-];
-
-function createTimelineItem(itemData) {
-  const itemDiv = document.createElement('div');
-  itemDiv.classList.add('timeline-item');
-  itemDiv.dataset.id = itemData.id;
+document.addEventListener('DOMContentLoaded', () => {
+    // Fetch data from the JSON file
+    fetch('timelineData.json')
+      .then(response => response.json())
+      .then(data => {
+        // Create the timeline from the fetched data
+        const timelineContainer = document.getElementById('timeline-container');
+        data.forEach(item => {
+          const timelineItem = createTimelineItem(item);
+          timelineContainer.appendChild(timelineItem);
+        });
+      })
+      .catch(error => console.error('Error fetching data:', error));
   
-  const contentDiv = document.createElement('div');
-  contentDiv.classList.add('item-content');
-  contentDiv.innerText = itemData.content;
+    // Function to create a timeline item
+    function createTimelineItem(itemData) {
+      const timelineItem = document.createElement('div');
+      timelineItem.classList.add('timeline-item');
+      timelineItem.textContent = itemData.title;
   
-  itemDiv.appendChild(contentDiv);
-  return itemDiv;
-}
-
-function onItemClick(event) {
-  const itemId = event.currentTarget.dataset.id;
-  // Add your logic here to open the selected item, e.g., show more details
-  console.log(`Item ${itemId} clicked!`);
-}
-
-function onItemHover(event) {
-  event.currentTarget.classList.add('opened-item');
-}
-
-function onItemLeave(event) {
-  event.currentTarget.classList.remove('opened-item');
-}
-
-function initializeTimeline() {
-  const timelineContainer = document.getElementById('timeline-container');
-
-  timelineData.forEach(itemData => {
-    const timelineItem = createTimelineItem(itemData);
-    timelineItem.addEventListener('click', onItemClick);
-    timelineItem.addEventListener('mouseenter', onItemHover);
-    timelineItem.addEventListener('mouseleave', onItemLeave);
-    timelineContainer.appendChild(timelineItem);
+      // Show hover text on item hover
+      timelineItem.addEventListener('mouseenter', () => {
+        const hoverTextContent = document.getElementById('hover-text-content');
+        hoverTextContent.textContent = 'Read More';
+        const hoverTextContainer = document.getElementById('hover-text-container');
+        hoverTextContainer.style.display = 'block';
+      });
+  
+      // Hide hover text on item leave
+      timelineItem.addEventListener('mouseleave', () => {
+        const hoverTextContainer = document.getElementById('hover-text-container');
+        hoverTextContainer.style.display = 'none';
+      });
+  
+      // Show "Read More" pop-up on item click
+      timelineItem.addEventListener('click', () => {
+        const popupContent = document.getElementById('popup-content');
+        popupContent.textContent = itemData.description;
+        const readMorePopup = document.getElementById('read-more-popup');
+        readMorePopup.style.display = 'block';
+      });
+  
+      return timelineItem;
+    }
   });
-}
-
-initializeTimeline();
+  
