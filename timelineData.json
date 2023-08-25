@@ -1,13 +1,14 @@
 [
   {
     "title": "John Doe",
-    "description": 30
-
+    "description": 30,
+    "image": "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-874158.jpg&fm=jpg"
   },
 
   {
     "title": "John Doe",
-    "description": 30
+    "description": 30,
+    "image": "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-874158.jpg&fm=jpg"
 
   }
  

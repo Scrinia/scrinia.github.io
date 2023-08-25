@@ -16,10 +16,15 @@ body {
     padding: 8px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
+    transition: opacity 0.3s; /* Add a smooth opacity transition */
   }
   
   .timeline-item:hover {
-    background-color: #e0e0e0;
+    opacity: 0.7; /* Lower opacity on hover */
+  }
+  
+  .timeline-image {
+    width: 100%; /* Adjust the image width as needed */
   }
   
   .hover-text {
