@@ -48,14 +48,15 @@ p, a {
     line-height: 1.6;
 }
 
+/* this works */
 a:visited {
     color: wheat;
     text-transform: uppercase;
 }
 
+/* this works too */
 a:hover{
     color: hotpink;
-    text-transform: var(--color-blue);
 }
 
 /*Timeline section*/
@@ -69,7 +70,7 @@ img {
 }
 
 .timeline-section ul {
-    background: var(--light-blue);
+    background: #FFE8D6;
     padding: 5rem 0; /* padding top and bottom 5rem */
 }
 
