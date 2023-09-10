@@ -222,7 +222,7 @@ a:link {
   /* visited link */
   a:visited {
     color: green;
-    text-decoration: underline;
+    text-decoration:dotted;
   }
   
   /* mouse over link */
