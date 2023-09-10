@@ -213,5 +213,25 @@ time {
       border-width: 8px 16px 8px 0;
       border-color: transparent var(--light-blue) transparent transparent;
     }
+
+    /* unvisited link */
+a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
 }
 
