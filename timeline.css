@@ -74,7 +74,7 @@ body {
 }
 
 .timeline-section ul {
-    background: #FFE8D6;
+    background: var(--color-blue);
     padding: 5rem 0; /* padding top and bottom 5rem */
 }
 
