@@ -42,14 +42,20 @@ body {
     font-size: 2.5rem;
 }
 
-p {
+p, a {
     font-size: 1.5rem;
     padding-top: 2rem;
     line-height: 1.6;
 }
 
-a {
-    font-size: 1.5 rem;
+a:visited {
+    color: wheat;
+    text-transform: uppercase;
+}
+
+a:hover{
+    color: hotpink;
+    text-transform: var(--color-blue);
 }
 
 /*Timeline section*/
@@ -217,26 +223,5 @@ time {
       border-width: 8px 16px 8px 0;
       border-color: transparent var(--light-blue) transparent transparent;
     }
-
-    /* unvisited link */
-a:link {
-    color: red;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: green;
-    text-decoration:dotted;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: hotpink;
-  }
-  
-  /* selected link */
-  a:active {
-    color: blue;
-  }
 }
 
