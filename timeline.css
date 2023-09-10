@@ -64,6 +64,10 @@ img {
     width: 100%;
 }
 
+body {
+    color: #FFE8D6;
+}
+
 .timeline-section {
     width: 100%;
     overflow: hidden;  /* creates block formatting context */
