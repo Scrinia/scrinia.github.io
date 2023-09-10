@@ -81,7 +81,8 @@ img {
     position: relative;
     width: 5px; /* set width to 5px then set background to lightblue for that width */
     margin: 0 auto; /* center text */
-    padding-top: 5rem; /* separate each list with a padding-top of 5rem = 5 x 10px= 50px */
+    padding-top: 5rem; /* separate each list with a padding-top of 5rem = 5 x 10px= 50px */'
+    background: var(--color-blue);
 }
 
 /*use pseudo elements to style*/
