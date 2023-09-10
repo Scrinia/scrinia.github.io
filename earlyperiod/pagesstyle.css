@@ -43,7 +43,7 @@ color:#bbbbbb; /** TEXT COLOR **/
 text-align:justify;
 font-family:calibri;
 font-size:9px;
-text-transform:uppercase;
+text-transform: none;
 letter-spacing:1px;
 line-height:150%;
 border:1px; border-width:1px; border-style:solid; 
