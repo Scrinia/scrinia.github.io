@@ -23,6 +23,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     color: black;
+    background-color: #FFE8D6;
 }
   
 /* Start Here */
@@ -65,17 +66,12 @@ img {
     width: 100%;
 }
 
-body {
-    background-color: #FFE8D6;
-}
-
 .timeline-section {
     width: 100%;
     overflow: hidden;  /* creates block formatting context */
 }
 
 .timeline-section ul {
-    background: var(--color-blue);
     padding: 5rem 0; /* padding top and bottom 5rem */
 }
 
