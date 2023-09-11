@@ -50,7 +50,7 @@ p, a {
 }
 
 a:link {
-    
+
     color: #ff9679;
 }
 
@@ -63,6 +63,11 @@ a:visited {
 /* this works too */
 a:hover{
     color: #c57900;
+}
+
+a:active
+{
+    color:white;
 }
 
 /*Timeline section*/
