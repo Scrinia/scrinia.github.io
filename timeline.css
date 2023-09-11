@@ -42,8 +42,14 @@ body {
     font-size: 2.5rem;
 }
 
-p, a {
+p {
     font-size: 1.5rem;
+    padding-top: 2rem;
+    line-height: 1.6;
+}
+
+a {
+    font-size: 1 rem;
     padding-top: 2rem;
     line-height: 1.6;
 }
