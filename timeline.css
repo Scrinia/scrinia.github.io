@@ -30,6 +30,7 @@ body {
     background-color: var(--color-dark-grey);
     color: var(--white);
     padding: 2rem 0;
+    
 }
   
 .container {
@@ -49,7 +50,7 @@ p {
 }
 
 a {
-    font-size: 1 rem;
+    /* font-size: 1 rem; */
     padding-top: 2rem;
     line-height: 1.6;
 }
