@@ -125,7 +125,7 @@ img {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: inherit; /* inherits this property from its parent element */
+    background: #FFE8EA; /* inherits this property from its parent element */
 }
 
 
@@ -180,7 +180,7 @@ img {
 .timeline-section ul li:nth-child(even) div::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent var(--light-blue); 
+    border-color: transparent transparent transparent  #FFE8D6; 
 }
 
 /*style the time tag*/
