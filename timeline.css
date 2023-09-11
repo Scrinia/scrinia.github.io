@@ -22,8 +22,6 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: black;
-    background-color: #FFE8D6;
 }
   
 /* Start Here */
@@ -37,28 +35,16 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
-    color:beige;
 }
   
 .intro-text h1 {
     font-size: 2.5rem;
 }
 
-p, a {
+p {
     font-size: 1.5rem;
     padding-top: 2rem;
     line-height: 1.6;
-}
-
-/* this works */
-a:visited {
-    color: wheat;
-    text-transform: uppercase;
-}
-
-/* this works too */
-a:hover{
-    color: hotpink;
 }
 
 /*Timeline section*/
@@ -72,9 +58,8 @@ img {
 }
 
 .timeline-section ul {
+    background: var(--light-blue);
     padding: 5rem 0; /* padding top and bottom 5rem */
-    color: black;
-    background-color: hotpink;
 }
 
 /*styling the liSt*/
