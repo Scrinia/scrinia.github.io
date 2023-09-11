@@ -73,7 +73,7 @@ img {
     padding: 5rem 0; /* padding top and bottom 5rem */
 }
 
-/*styling the liSt*/
+/* the line */
 .timeline-section ul li {
     list-style: none;
     position: relative;
@@ -83,8 +83,7 @@ img {
     background: hotpink;
 }
 
-/*use pseudo elements to style*/
-/*This section will help us make the node-like structure - The circle*/
+/* the circles */
 .timeline-section ul li::after {
     content: "";/* The content attribute is required for pseudo-elements to render */
     position: absolute;
@@ -94,7 +93,7 @@ img {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: green; /* inherits this property from its parent element */
+    background: inherit; /* inherits this property from its parent element */
 }
 
 
