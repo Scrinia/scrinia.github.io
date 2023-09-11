@@ -83,7 +83,7 @@ img {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: inherit; /* inherits this property from its parent element */
+    background: green; /* inherits this property from its parent element */
 }
 
 
