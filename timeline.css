@@ -47,6 +47,17 @@ p {
     line-height: 1.6;
 }
 
+/* this works */
+a:visited {
+    color: wheat;
+    text-transform: uppercase;
+}
+
+/* this works too */
+a:hover{
+    color: hotpink;
+}
+
 /*Timeline section*/
 img {
     width: 100%;
