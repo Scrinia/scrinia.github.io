@@ -45,13 +45,14 @@ body {
 
 p, a {
     font-size: 1.5rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     line-height: 1.6;
 }
 
 a:link {
 
-    color: #ff9679;
+    color: #C77D48;
 }
 
 /* this works */
@@ -85,7 +86,7 @@ img {
 }
 
 .timeline-section a:link{
-    color: #ff9679;
+    color: #C77D48;
 }
 
 .timeline-section a:visited{
@@ -103,7 +104,7 @@ img {
 /* the background */
 .timeline-section ul {
     padding: 5rem 0; /* padding top and bottom 5rem */
-    background-color: #FFE8D6;
+    background-color: #191919;
 }
 
 /* the line */
@@ -113,7 +114,7 @@ img {
     width: 5px; /* set width to 5px then set background to lightblue for that width */
     margin: 0 auto; /* center text */
     padding-top: 5rem; /* separate each list with a padding-top of 5rem = 5 x 10px= 50px */
-    background: #ff9679;
+    background: #C77D48;
 }
 
 /* the circles */
@@ -169,7 +170,7 @@ img {
 .timeline-section ul li:nth-child(odd) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #FFF5F2 transparent transparent; 
+    border-color: transparent white transparent transparent; 
 }
  
 /*This is to select the divs at even number position so we can separate the divs to the left part*/
@@ -181,7 +182,7 @@ img {
 .timeline-section ul li:nth-child(even) div::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent  #FFF5F2; 
+    border-color: transparent transparent transparent white; 
 }
 
 /*style the time tag*/
@@ -200,7 +201,7 @@ time {
 /*this changes the node content..giving it a background of white and making the border thicker*/
 .timeline-section ul li.slide-in::after {
     background: var(--white);
-    border: 3px solid var(--light-blue);
+    border: 3px solid #C77D48;
 }
 
 /* Hide event card initially */
@@ -218,12 +219,12 @@ time {
     transform: translateX(-20rem);
 }
 
-/* display the event card */
+/* display the event card/content background and text */
 .timeline-section ul li.slide-in div {
     transform: none;
     visibility: visible;
     opacity: 1;
-    background-color: #FFF5F2;
+    background-color: white;
     /* change */
 }
 
