@@ -102,7 +102,7 @@ img {
 
 .timeline-section ul {
     padding: 5rem 0; /* padding top and bottom 5rem */
-    background-color: #FFE8D6;
+    background-color: #FFE8EA;
 }
 
 /* the line */
@@ -125,7 +125,7 @@ img {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: #FFE8EA; /* inherits this property from its parent element */
+    background: inherit; /* inherits this property from its parent element */
 }
 
 
