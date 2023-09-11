@@ -26,23 +26,26 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     color: black;
+    background-color: #191919;
 }
 
 .intro-text {
     background-color: #222831;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
+    
     
 }
   
 .container {
     margin: 0 auto;
-    padding: 0;
+    padding: 0 20px;
     text-align: center;
 }
 
 .intro-text h1 {
     font-size: 2.5rem;
+    padding-bottom: 1rem;
 }
 
 p, a {
@@ -50,4 +53,25 @@ p, a {
     padding-top: 1rem;
     padding-bottom: 1rem;
     line-height: 1.6;
+}
+
+a:link {
+
+    color: #C77D48;
+}
+
+/* this works */
+a:visited {
+    color: #7985ff;
+    text-transform: uppercase;
+}
+
+/* this works too */
+a:hover{
+    color: #c57900;
+}
+
+a:active
+{
+    color:white;
 }
