@@ -168,7 +168,7 @@ img {
 .timeline-section ul li:nth-child(odd) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent var(--light-blue) transparent transparent;
+    border-color: transparent #FFE8D6 transparent transparent; 
 }
  
 /*This is to select the divs at even number position so we can separate the divs to the left part*/
