@@ -100,9 +100,10 @@ img {
     color: #c57900;
 }
 
+/* the background */
 .timeline-section ul {
     padding: 5rem 0; /* padding top and bottom 5rem */
-    background-color: #FFE8EA;
+    background-color: #FFE8D6;
 }
 
 /* the line */
