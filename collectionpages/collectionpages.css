@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+.two-columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* columns */
+.two-columns-grid > * {
+    padding: 1rem;
+    margin-top: 50px;
+}
+
+.two-columns-grid :nth-child(odd){
+    margin-left: 100px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+
+.intro-text {
+    background-color: #222831;
+    color: white;
+    padding: 1rem;
+    
+}
+  
+.container {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+}
+
+p, a {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    line-height: 1.6;
+}
