@@ -53,17 +53,18 @@ a {
     /* font-size: 1 rem; */
     padding-top: 2rem;
     line-height: 1.6;
+    color: #ff9679;
 }
 
 /* this works */
 a:visited {
-    color: wheat;
+    color: #7985ff;
     text-transform: uppercase;
 }
 
 /* this works too */
 a:hover{
-    color: hotpink;
+    color: #c57900;
 }
 
 /*Timeline section*/
