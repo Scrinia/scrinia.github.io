@@ -80,23 +80,23 @@ img {
     overflow: hidden;  /* creates block formatting context */
 }
 
-a.timeline-section{
+.timeline-section a{
     font-size: 1.2rem;
 }
 
-a.timeline-section:link{
+.timeline-section a:link{
     color: #ff9679;
 }
 
-a.timeline-section:visited{
+.timeline-section a:visited{
     color: #7985ff;
 }
 
-a.timeline-section:active{
+.timeline-section a:active{
     color:white;
 }
 
-a.timeline-section:hover{
+.timeline-section a:hover{
     color: #c57900;
 }
 
