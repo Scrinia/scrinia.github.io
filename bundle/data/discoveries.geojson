@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-74.006, 40.7128]
+          },
+          "properties": {
+              "name": "Marie Curie",
+              "discovery": "Radium and Polonium",
+              "date": "1898",
+              "link": "https://www.britannica.com/biography/Marie-Curie"
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-0.1276, 51.5074]
+          },
+          "properties": {
+              "name": "Michael Faraday",
+              "discovery": "Electromagnetic Induction",
+              "date": "1831",
+              "link": "https://www.britannica.com/biography/Michael-Faraday"
+          }
+      },
+      
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [30.3158, 59.9343]
+          },
+          "properties": {
+              "name": "Dmitri Mendeleev",
+              "discovery": "Periodic Table",
+              "date": "1869",
+              "link": "https://www.britannica.com/biography/Dmitri-Mendeleev"
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [8.6821, 50.1109]
+          },
+          "properties": {
+              "name": "August Kekulé",
+              "discovery": "Structure of Benzene",
+              "date": "1865",
+              "link": "https://www.britannica.com/biography/August-Kekule-von-Stradonitz"
+          }
+      }
+  ]
+}

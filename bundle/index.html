@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chemistry Discoveries Map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; }
+        #map { 
+            width: 100%;
+            flex-grow: 1;
+            height: 100%;
+        }
+        #container { 
+            display: flex; 
+            height: 100%;
+        }
+        #sidebar {
+            flex-shrink: 0;
+            width: 300px;
+            height: 100%;
+            padding: 30px;
+            overflow-y: auto;
+        }
+        button {
+            display: block;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <h2>Discoveries You've Made</h2>
+            <div id="discovery-list"></div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script>
+        const INITIAL_CENTER = [20, 10];
+        const INITIAL_ZOOM = 1.8;
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoiamVlbnNreSIsImEiOiJjbGlqMTkyc2QwM3RxM2VvZGFpaWdvMnMwIn0.ztbnUDHDtwrmBEDobIvJtg';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            zoom: INITIAL_ZOOM,
+            center: INITIAL_CENTER,
+            projection: 'naturalEarth'
+        });
+
+        let discoveriesMade = [];
+        let totalDiscoveries = 0;
+
+        map.on('load', () => {
+            map.addSource('discoveries', {
+                type: 'geojson',
+                data: 'data/discoveries.geojson'
+            });
+
+            // Count the total number of discoveries
+            fetch('data/discoveries.geojson')
+                .then(response => response.json())
+                .then(data => {
+                    totalDiscoveries = data.features.length;
+                    addMarkers(data.features);
+                })
+                .catch(error => {
+                    console.error('Error loading the GeoJSON data: ', error);
+                });
+        });
+
+        function addMarkers(features) {
+            features.forEach(discovery => {
+                const marker = new mapboxgl.Marker()
+                    .setLngLat(discovery.geometry.coordinates)
+                    .setPopup(new mapboxgl.Popup({ offset: 25 }) 
+                        .setHTML(
+                            `<h3>${discovery.properties.name}</h3>
+                            <p><strong>Discovery:</strong> ${discovery.properties.discovery}</p>
+                            <p><strong>Date:</strong> ${discovery.properties.date}</p>
+                            <a href= ${discovery.properties.link}>Read More</a>`
+                        ))
+                    .addTo(map);
+
+                // Listen for marker click event
+                marker.getElement().addEventListener('click', () => {
+                    addDiscoveryToSidebar(discovery.properties.name, discovery.properties.discovery, discovery.properties.date);
+                });
+            });
+        }
+
+        function addDiscoveryToSidebar(name, discovery, date) {
+            // Check if discovery was already made
+            if (!discoveriesMade.some(item => item.name === name)) {
+                discoveriesMade.push({ name, discovery, date });
+
+                // Add discovery to the sidebar
+                const discoveryList = document.getElementById('discovery-list');
+                const newItem = document.createElement('div');
+                newItem.innerHTML = `<h4>${name}</h4><p><strong>Discovery:</strong> ${discovery}</p><p><strong>Date:</strong> ${date}</p>`;
+                discoveryList.appendChild(newItem);
+
+                // Check if all discoveries have been made
+                if (discoveriesMade.length === totalDiscoveries) {
+                    const finalMessage = document.createElement('p');
+                    finalMessage.innerHTML = "You've discovered all available information!";
+                    discoveryList.appendChild(finalMessage);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
